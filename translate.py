@@ -35,7 +35,7 @@ for record in sequences:
         # Split translated protein at stop codons ("*").
         # This gives fragments of amino acids between stop codons.
         fragments = str(protein).split("*")
-        longest_in_frame = maxx(fragments, key=len)
+        longest_in_frame = max(fragments, key=len)
 
         # Keep track of the longest ORF found so far across all frames
         if len(longest_in_frame) > len(best_orf):
@@ -98,3 +98,4 @@ print(df.head())
 # -----------------------------
 # END
 # -----------------------------
+print("hello")
